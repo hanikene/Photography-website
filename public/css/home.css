@@ -1,0 +1,202 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+html {
+  background: #000;
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  background: url(/../photos/background.jpg) no-repeat center / cover;
+  font-family: 'Hind', sans-serif;
+}
+
+#mainContainer {
+  width: 100%;
+  height: 100%;
+  color: white;
+  overflow: hidden;
+}
+
+#transitionContainer {
+  height: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+h1,
+h2,
+#mainContainer li {
+  font-weight: 300;
+}
+
+#transitionContainer h1 {
+  font-size: 11em;
+  height: 240px;
+}
+
+#mainContainer ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: row;
+  font-size: 1em;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+#mainContainer li {
+  border: 2px rgba(255, 255, 255, 0.6) solid;
+  padding: 0.7% 1.3%;
+  border-radius: 2%;
+  transition: 0.2s all;
+  cursor: pointer;
+  color: #fff;
+}
+
+#mainContainer li:hover {
+  color: #000;
+  background: #fff;
+  border: 2px rgba(255, 255, 255, 1) solid;
+}
+
+#photoContainer,
+#contactContainer,
+#photoPage {
+  position: absolute;
+  top: 0;
+  background: #111;
+  width: 100%;
+  display: none;
+}
+
+#contactContainer {
+  background: rgba(0, 0, 0, 0.8);
+  height: 100vh;
+}
+
+#photoContainer div img {
+  position: absolute;
+}
+
+#photoPage {
+  overflow: hidden;
+}
+
+#closeButton1,
+#closeButton2,
+#closeButton3 {
+  width: 100%;
+  font-size: 1.5em;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: flex-end;
+  color: #aaa;
+}
+
+#closeButton1 span,
+#closeButton2 span,
+#closeButton3 span {
+  cursor: pointer;
+  transition: 0.3s all;
+  height: 24px;
+  width: 24px;
+}
+
+#closeButton1 span:hover,
+#closeButton2 span:hover,
+#closeButton3 span:hover {
+  transform: rotate(0.25turn);
+  transform-origin: 8px 16.4px;
+}
+
+#photoPage div:last-child {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px 10px 10px;
+  height: calc(100vh - 64px);
+  width: 100%;
+  color: #aaa;
+  font-size: 3rem;
+}
+
+#next,
+#previous {
+  width: 70px;
+  text-align: center;
+}
+
+#next {
+  order: 2;
+}
+
+.nextActive:hover {
+  animation: rightMovement 0.5s ease-in-out infinite alternate;
+  cursor: pointer;
+}
+
+.previousActive:hover {
+  animation: leftMovement 0.5s ease-in-out infinite alternate;
+  cursor: pointer;
+}
+
+.photoPage {
+  max-height: 110%;
+  max-width: 80%;
+  order: 1;
+  transform: translate(0, -5%);
+}
+
+@keyframes rightMovement {
+  from {
+    transform: translate(0);
+  }
+  to {
+    transform: translate(10px, 0);
+  }
+}
+
+@keyframes leftMovement {
+  from {
+    transform: translate(0);
+  }
+  to {
+    transform: translate(-10px, 0);
+  }
+}
+
+@media (max-width: 705px) {
+  #loading {
+    font-size: 3rem;
+  }
+
+  #transitionContainer h1 {
+    font-size: 5em;
+    height: 140px;
+  }
+
+  #transitionContainer h2 {
+    font-size: 1em;
+  }
+
+  #transitionContainer {
+    height: 83%;
+  }
+}

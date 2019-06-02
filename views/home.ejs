@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Hind:300,400,600"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/home.css" />
+    <title>Hanikene Photography</title>
+  </head>
+
+  <body>
+    <section id="mainContainer">
+      <div id="transitionContainer">
+        <h1>Hanikene</h1>
+        <h2>Photographer based in Algiers</h2>
+      </div>
+      <ul>
+        <li>Photography</li>
+        <li>
+          <a href="https://instagram.com/hanikene" target="_blank">Instagram</a>
+        </li>
+        <!-- <li>Contact</li> -->
+      </ul>
+    </section>
+    <section id="photoContainer">
+      <div id="closeButton1">
+        <span><i class="fas fa-times"></i></span>
+      </div>
+      <div>
+        <% photos.forEach(function(photo) { %>
+        <img
+          src="photos/<%= photo %>"
+          id="<%= photo.slice(0,3) %>"
+          style="cursor: pointer"
+        />
+        <% }) %>
+      </div>
+    </section>
+    <section id="photoPage">
+      <div id="closeButton3">
+        <span><i class="fas fa-times"></i></span>
+      </div>
+      <div>
+        <i id="previous" class="fas fa-chevron-left"></i>
+        <i id="next" class="fas fa-chevron-right"></i>
+      </div>
+    </section>
+    <section id="contactContainer">
+      <div id="closeButton2">
+        <span><i class="fas fa-times"></i></span>
+      </div>
+    </section>
+    <script type="text/javascript" src="js/home.js"></script>
+  </body>
+</html>

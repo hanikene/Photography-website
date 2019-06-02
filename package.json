@@ -1,0 +1,16 @@
+{
+  "name": "photography-website",
+  "version": "1.0.0",
+  "description": "\"A simple photography web site\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "author": "Nassim Hani Ikene",
+  "license": "MIT",
+  "dependencies": {
+    "ejs": "^2.6.1",
+    "express": "^4.16.4"
+  }
+}
